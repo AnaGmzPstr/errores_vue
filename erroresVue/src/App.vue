@@ -1,20 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import KeySample from './components/KeyForSample.vue'
+import WatchArray from './components/WatchArrayExample.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <KeySample></KeySample>
+  <WatchArray></WatchArray>
 </template>
 
 <style scoped>
