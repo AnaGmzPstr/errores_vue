@@ -16,7 +16,7 @@ function shuffleItems() {
 
 <template>
   <ul>
-    <li v-for="item in items" >{{ item.label }} 
+    <li v-for="item in items" :key="item.id" >{{ item.label }} 
         <input type="text" /></li>
   </ul>
   <button @click="shuffleItems">Shuffle</button>
