@@ -1,13 +1,17 @@
 <script setup>
-import { shuffle } from 'lodash'
-import { ref } from 'vue'
+
+import { ref, watch } from 'vue';
+
+const text = ref("");
 
 const items = ref([
   { id: 1, label: 'first name' },
   { id: 2, label: 'last name' },
   { id: 3, label: 'email' },
   { id: 4, label: 'website' }
-])
+]);
+
+watch(text, (newText, oldText) => console.log(newText, oldText))
 
 function shuffleItems() {
   items.value = shuffle(items.value)
@@ -16,8 +20,9 @@ function shuffleItems() {
 
 <template>
   <ul>
-    <li v-for="item in items" :key="item.id" >{{ item.label }} 
-        <input type="text" /></li>
+    <!--  <li v-for="item in items" :key="item.id" >{{ item.label }} --> 
+      <input type="text" v-model="text"/>
+    <!-- </li> -->
   </ul>
   <button @click="shuffleItems">Shuffle</button>
 </template>

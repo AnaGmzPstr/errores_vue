@@ -2,11 +2,8 @@
 import { ref, watch } from 'vue'
 const numbers = ref([])
 
-watch(numbers, () => console.log('new number added'))
-
-const randomNum = () => numbers.value.push(Math.random())
-
-watch(numbers, () => console.log('new number added'));
+watch(numbers, (numbers) => console.log(numbers), {deep:true});
+const randomNum = () => numbers.value.push((Math.random()*100).toFixed(0));
 
 </script>
 <template>
