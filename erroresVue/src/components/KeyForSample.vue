@@ -20,9 +20,9 @@ function shuffleItems() {
 
 <template>
   <ul>
-    <!--  <li v-for="item in items" :key="item.id" >{{ item.label }} --> 
+    <li v-for="item in items" :key="item.id" >{{ item.label }}
       <input type="text" v-model="text"/>
-    <!-- </li> -->
+    </li>
   </ul>
   <button @click="shuffleItems">Shuffle</button>
 </template>
