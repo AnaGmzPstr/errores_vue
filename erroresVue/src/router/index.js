@@ -8,6 +8,11 @@ const routes = [
         name: 'Home',
         component: Home,
     },
+    {
+        path:'/desti/:id',
+        name: 'desti',
+        component:()=> import('../components/Desti.vue'),
+    },
 ]
 const router = createRouter({
     history: createWebHashHistory(),
